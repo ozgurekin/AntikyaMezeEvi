@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Antikya Meze Evi</title>
+  </head>
+  <style>
+    body {
+      background-color: #00473a;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+    .menubar {
+      width: 100%;
+      height: 260px;
+      background-color: #00473a;
+      display: flex;
+      justify-content: space-around;
+    }
+    .logo img {
+      margin-top: 10px;
+      padding: 10px;
+      margin-left: -20%;
+      display: flex;
+    }
+    .menu ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 20px;
+      margin: 5px;
+    }
+
+    .menu a {
+      color: white;
+      font-size: 25px;
+      text-decoration: border-box;
+      box-sizing: border-box;
+      border: 0.5px solid white;
+      padding: 10px;
+      transition: 0.5s;
+      text-decoration: none;
+    }
+    .menu li:hover a {
+      color: #073f68;
+      background-color: white;
+    }
+    .galeri {
+      display: flex;
+      justify-content: space-around;
+      margin-top: -20px;
+      font-size: 150%;
+    }
+
+    .arkaplanfoto h1 {
+      text-align: center;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-size: 500%;
+      margin-top: 15px;
+      color: aliceblue;
+    }
+    .galeri h2 {
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      list-style: none;
+      padding-inline: 30px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      margin-top: 10px;
+      text-decoration: border-box;
+      text-shadow: 2px, 1px, 4px #000;
+      box-sizing: border-box;
+      border: 1px solid rgb(255, 255, 255);
+      color: aliceblue;
+    }
+    .galeri ul li {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      list-style-type: none;
+      align-content: space-around;
+      line-height: 60px;
+      color: aliceblue;
+      text-align: left;
+      padding: 0.5px;
+      padding-right: 60px;
+    }
+    .arkaplanfoto {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("Asi nehri.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: inline;
+      align-items: center;
+      flex-direction: column;
+      margin: -35px;
+      width: 99%;
+    }
+    .arasicak,
+    .meze,
+    .ickiler {
+      border: 3px solid white;
+      box-sizing: border-box;
+      box-shadow: 1px 1px 8px 1px #f0f0f0;
+      padding-inline: 5px;
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: rgba(3, 2, 2, 0.3);
+    }
+    .menugorseller {
+      margin: 50px;
+      padding: 0.5%;
+      padding-bottom: 2%;
+      box-sizing: content-box;
+      border: 2px solid white;
+    }
+    .menugorseller img {
+      float: left;
+      width: 13.5%;
+      padding: 18px;
+      margin: 0.1%;
+      align-items: center;
+      max-width: 200px;
+      position: relative;
+      border: 2px solid #999;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+    }
+    .menugorseller .oruk {
+      color: #ffffff;
+      text-align: center;
+      position: absolute;
+      inline-size: 18%;
+      padding: -20px;
+      margin: -17px;
+    }
+    .menugorseller .kaytaz {
+      color: #ffffff;
+      text-align: center;
+      position: absolute;
+      inline-size: 17%;
+      padding-left: 16%;
+      margin: -17px;
+    }
+    .menugorseller .fellah {
+      color: #ffffff;
+      text-align: center;
+      position: absolute;
+      inline-size: 15%;
+      padding-left: 32.5%;
+      margin: -18px;
+    }
+    .menugorseller .ucgenborek {
+      color: #ffffff;
+      text-align: center;
+      position: absolute;
+      inline-size: 13%;
+      padding-left: 48.5%;
+      margin: -18px;
+    }
+    .menugorseller .abugannus {
+      color: #ffffff;
+      text-align: center;
+      position: absolute;
+      inline-size: 13%;
+      padding-left: 64%;
+      margin: -18px;
+    }
+    .menugorseller .katikli {
+      color: #ffffff;
+      text-align: center;
+      position: absolute;
+      inline-size: 18%;
+      padding-left: 76%;
+      margin: -18px;
+    }
+    ul p {
+      text-align: right;
+      color: white;
+      font-size: 70%;
+      margin-block-start: -35px;
+    }
+    h4 {
+      color: white;
+      margin-bottom: -30px;
+    }
+    h5 {
+      color: white;
+      font-size: 14px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: -20px;
+      padding: 20px;
+      padding-inline-start: -90px;
+      padding-top: 0, 0, 0, 0;
+      padding-right: 50px;
+      /* margin-top: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: -80px; */
+    }
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 150%;
+      padding-inline-end: 50px;
+      padding-top: 2%;
+    }
+    .galeri h6 {
+      font-style: italic;
+      color: white;
+      text-align: left;
+      margin-block-start: -10px;
+      margin-block-end: 10px;
+    }
+  </style>
+  <body>
+    <div class="menubar">
+      <div class="logo">
+        <img src="Antikya.png" width="230px" alt="" />
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <br /><br />
+    <span class="arkaplanfoto">
+      <h1>MENÜ</h1>
+      <hr width="80%" />
+      <br /><br /><br /><br />
+      <div class="galeri">
+        <div class="arasicak">
+          <h2>ARA SICAKLAR</h2>
+          <ul>
+            <li>Kaytaz Böreği(4 Adet)</li>
+            <p>300TL</p>
+            <h6>(soğan, kıyma)</h6>
+            <li>Oruk(İçli Köfte)(3 Adet)</li>
+            <p>300TL</p>
+            <h6>(bulgur, kıyma, irmik,soğan, ceviz)</h6>
+            <li>Ispanaklı Fellah Köftesi</li>
+            <p>200TL</p>
+            <li>Katıklı Ekmek (4 Dilim)</li>
+            <p>200Tl</p>
+            <h6>(çökelek, domates, soğan, susam, kekik)</h6>
+            <li>Ispanaklı Üçgen Börek</li>
+            <p>200TL</p>
+          </ul>
+        </div>
+
+        <div class="meze">
+          <h2>MEZELER</h2>
+          <ul>
+            <li>Abagannuş</li>
+            <p>170TL</p>
+            <h6>
+              (közlenmiş patlıcan, közlenmiş biber, közlenmiş domates, sarımsak)
+            </h6>
+            <li>Zeytinyağlı Humus</li>
+            <p>180TL</p>
+            <li>Patlıcan Yoğurtlama</li>
+            <p>170TL</p>
+            <li>Havuç Tarator</li>
+            <p>150TL</p>
+            <li>Muhammara (Cevizli Biber)</li>
+            <p>150TL</p>
+            <li>Zahter (Kekik) Salatası</li>
+            <p>150TL</p>
+            <h6>(dağ kekiği, soğan, maydonoz, domates)</h6>
+            <li>Çökelek Salatası</li>
+            <p>150TL</p>
+            <h6>(domates, biber, soğan, maydonoz, nane, çökelek)</h6>
+            <li>Zeytin Salatası</li>
+            <p>150TL</p>
+            <h6>(yeşil zeytin, domates, maydonoz, soğan)</h6>
+          </ul>
+        </div>
+        <div class="ickiler">
+          <h2>RAKILAR</h2>
+
+          <ul>
+            <li>Rakı Duble</li>
+            <p>240TL</p>
+            <li>Yeni Rakı 35cl</li>
+            <p>620TL</p>
+            <li>Yeni Rakı 50cl</li>
+            <p>820TL</p>
+            <li>Yeni Rakı 70cl</li>
+            <p>1250TL</p>
+            <li>Yeni Rakı 100cl</li>
+            <p>1700TL</p>
+            <li>Yeni Rakı Yeni Seri 35cl</li>
+            <p>800TL</p>
+            <li>Tekirdağ Altın Seri 35cl</li>
+            <p>850TL</p>
+            <li>Efe Gold 35cl</li>
+            <p>800TL</p>
+            <li>Efe Gold 70cl</li>
+            <p>1450TL</p>
+            <li>Beylerbeyi Göbek 35cl</li>
+            <p>900TL</p>
+          </ul>
+        </div>
+      </div>
+    </span>
+    <div class="menugorseller">
+      <img src="orukkoftesc4b1.png" alt="" />
+      <div class="oruk">
+        <h3>Oruk (İçli Köfte)</h3>
+      </div>
+      <img src="kaytaz-boregi.jpg" alt="" />
+      <div class="kaytaz">
+        <h3>Kaytaz Böreği</h3>
+      </div>
+      <img src="Adana-Usulu-Fellah-Koftesi-Tarifi-4.jpg" alt="" />
+      <div class="fellah">
+        <h3>Fellah Köftesi</h3>
+      </div>
+      <img src="ispanakli-ucgen-borek-img-2.jpg" alt="" />
+      <div class="ucgenborek">
+        <h3>Ispanaklı Üçgen Börek</h3>
+      </div>
+      <img src="abugannuş.jpg" alt="" />
+      <div class="abugannus">
+        <h3>Abugannuş</h3>
+      </div>
+      <img src="katıklıekmek.jpg" alt="" />
+      <div class="katikli">
+        <h3>Katıklı Ekmek</h3>
+      </div>
+    </div>
+  </body>
+</html>
